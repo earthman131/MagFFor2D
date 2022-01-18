@@ -1,8 +1,12 @@
 # MagFFor2D
 
-A wavenumber-domain approach for 3-D forward modeling of gravity anomalies and gradients.
+% A wavenumber-domain approach for quasi 3-D forward modeling of magneitc anomalies and gradients.
 
 Developed by Lianghui Guo and Yatong Cui.
+
+# Principles
+
+MagFFor2D is a Matlab code for magnetic wavenumber-domain forward modeling of a 3D mesh model. Suppose that the 3D magnetization model consists of several flat layers with the same thickness from top to bottom, and each layer is composed of a set of regularly arranged vertical prisms with the same size but different values of magnetization . MagFFor2D is suitable for fast forward modeling of large-scale models and can directly calculate the anomalies of the observational surface. 
 
 # Prerequisites
 
@@ -10,7 +14,7 @@ The code being implemented in MATLAB, it requires the MATLAB software, which is 
 
 # Usage
 
-To launch the program, it just requires to dowload ‘Matlab_Code’ from my repositories and execute the script GMCurvature.m on MATLAB. 
+To launch the program, it just requires to dowload ‘Matlab_Code’ from my repositories and execute the script main_magnetic2d_forward.m on MATLAB. 
 
 # Email:
 

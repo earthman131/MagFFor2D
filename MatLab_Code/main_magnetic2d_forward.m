@@ -1,26 +1,35 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A wavenumber-domain approach for quasi 3-D forward modeling of magneitc anomalies and gradients.
+% Author: Yatong Cui, Lianghui Guo (guolh@cugb.edu.cn)
+% Organization: China University of Geosciences (Beijing), School of Geophysics and Information Technology
+% Compiled version: MATLAB R2017b
+% Reference:
+%       Cui Y T, Guo L H. A wavenumber-domain iterative approach for 3D imaging of magnetic
+%       anomalies and gradients with depth constraints. Journal of Geophysics and Engineering, 
+%       2019, 16(6): 1032-1047.
 % Description of the input parameters: 
 %       infile_msh: model mesh file
 %       infile_mod: model density file, unit: A/m
-%       inclination, declinationï¼šgeomagnetic inclination and declination 
+%       inclination, declination£ºgeomagnetic inclination and declination 
 %                  The direction of magnetization is consistent with the direction of geomagnetic field
 % Description of the output parameters: 
 %       outfile_Ut: calculated anomaly
-% Description of primary identifiersï¼š
+% Description of primary identifiers£º
 %       x, y: x, y verctor
 %       nx, ny: number of points in x and y directions
 %       dx, dy: spacing in x and y directions
 %       npts: extension points
-%       mï¼šmagnetization distribution, unit: A/m
-%       u0ï¼švacuum magnetic permeability, unit: Henry/m
-%       mexï¼šmagnetization distribution after extension
-%       Fï¼šgeomagnetic field direction vector
-%       Mï¼šmagnetization direction vector
-%       Utï¼šmagnetic anomaly, unit: nT
+%       m£ºmagnetization distribution, unit: A/m
+%       u0£ºvacuum magnetic permeability, unit: Henry/m
+%       mex£ºmagnetization distribution after extension
+%       F£ºgeomagnetic field direction vector
+%       M£ºmagnetization direction vector
+%       Ut£ºmagnetic anomaly, unit: nT
 % Description of subroutine function: 
 %       readmsh.m: read mesh file
 %       readmod.m: read model file
 %       wave2d.m: calculate wavenumber
-%       getINDE.mï¼šcalculate geomagnetic field direction vector and magnetization direction vector
+%       getINDE.m£ºcalculate geomagnetic field direction vector and magnetization direction vector
 %       extend_copy2d.m: copy edge extension
 %       forward_Ut.m: calculated magnetic anomaly
 %       savegrd.m: save surfer text grd file
